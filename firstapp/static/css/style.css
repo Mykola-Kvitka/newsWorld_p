@@ -1,0 +1,225 @@
+html,body{
+    padding: 0;
+    margin: 0;
+    background-color: darkslategrey;
+}
+header{
+    width: 100%;
+    height: 80px;
+    background-color: ghostwhite;
+}
+.header{
+    height: 80px;    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+#adminButton{
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    text-decoration: none;
+    transition: 0.5s;
+    
+}
+#adminButton:hover{
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    transform: translate(0, -4px);
+    box-shadow:0 0 10px rgba(0,0,0,0.5);
+}
+.topics__contayner{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.topic{
+    color: black;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 5px;
+    text-decoration: none;
+    transition: 0.5s;
+    margin-right: 20px;
+}
+.topic:hover{
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    transform: translate(0, -4px);
+    box-shadow:0 0 10px rgba(0,0,0,0.5);
+}
+#siteName{
+    font-weight: 600;
+    font-size: 40px;
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+}
+#siteName:hover{
+    transform: translateY(-4px);
+}
+.contayner{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+main{
+    min-height: 68vh;
+}
+#body_contayner{
+    background-color:  ghostwhite;
+    padding: 20px;
+}
+#body_contayner h1{
+    margin: 0 auto;
+    text-align: center;
+}
+.news__contayner{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+}
+.news__block{
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow:0 0 10px rgba(0,0,0,0.5);
+    height: 150px; 
+    min-width: 90%; 
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+}
+.news__block div{
+    margin-bottom: 5px;
+}
+.news__block:hover{
+    transform: translate(0, -4px);
+}
+.news__title{
+    font-size: 30px;
+    font-weight: 600;
+}
+.news__short__text{
+    font-size: 20px;
+    font-weight:600 ;
+}
+.news__body__text{
+    font-size: 18px;
+    max-height: 70px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.news__date{
+    color: grey;
+}
+
+/*
+
+-----------------------------------------------
+
+
+*/
+.ceratinNews__data__block{
+    margin-top: 20px;
+}
+.ceratinNews__text__block{
+    font-size: 25px;
+    margin-top: 10px;
+}
+.ceratinNews__author__block{
+    font-size: 20px;
+    margin-top: 10px;
+}
+.add__comment__contayner{
+    margin-top: 60px;
+}
+.comment__block{
+    font-size: 20px;
+    color: black;
+    border: 2px solid grey;
+    border-radius: 5px;
+    width: 80%;
+    padding: 7px;
+    margin-top: 20px;
+    background-color: rgba(0,0,0,0.1);
+}
+.comment__block div{
+    margin-bottom: 7px;
+}
+.comment__author{
+    font-weight: 600;
+}
+.comment__date{
+    color: grey;
+}
+
+/*
+
+-----------------------------------------------
+
+
+*/
+footer{
+    width: 100%;
+    background-color: ghostwhite ;
+    margin: 0;
+    padding: 0;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    padding: 10px;
+    margin: 0;
+}
+.footer__block{
+    text-align: center;
+    width: 33.333%;
+}
+.registration__form_contayner{
+    width: 80%;
+    margin: 0 auto;
+}
+.registration__form{
+    margin-top: 20px;
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.5);
+    font-size: 20px;
+}
+.registration__form label{
+   font-weight: 600;
+}
+.registration__form input{
+    font-size: 20px;
+ }
+ .registration__form button{
+    color: black;
+    border: 1px solid black;
+    background-color: ghostwhite;
+    border-radius: 5px;
+    padding: 5px;
+    text-decoration: none;
+    font-size:20px;
+    transition: 0.5s;
+    margin-top: 20px;
+    
+}
+.registration__form button:hover{
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    transform: translate(0, -4px);
+    box-shadow:0 0 10px rgba(0,0,0,0.5);
+}

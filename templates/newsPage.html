@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+        <div class="contayner" id="body_contayner">            
+            <h1>{{certainNews.name | title}}</h3>
+            <div class="ceratinNews__data__block">{{certainNews.date|date}}</div>
+            <div class="ceratinNews__text__block">{{certainNews.body_txt}}</div>
+            <div class="ceratinNews__author__block">by {{certainNews.writer|title}}</div>
+            <div class="add__comment__contayner">
+                <h2>Add your comment</h2>
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <input type="submit" value="Add a comment"/>
+                </form>                
+            </div>
+            <div class="comment__contayner">
+                {% for element in comments %} 
+                <div class="comment__block">
+                    <div class="comment__author">{{element.authorName|title}}</div>
+                    <div class="comment__text">{{element.commentBody}}</div>
+                    <div class="comment__date">{{element.dateTime|date}}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>        
+{% endblock %}

@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%  static  'css/style.css'  %}">
+    <title>IT News World</title>
+</head>
+<body>
+    <header>
+      <div class="contayner">
+        <div class="header">
+            <a id="siteName" href="http://127.0.0.1:8000/">
+                IT News World
+            </a>
+            <div class="autho__butts">        
+                {% if user.is_authenticated %}
+                    User: {{ user.get_username }}
+                    <a id="adminButton" href="{% url 'logout'%}?next={{request.path}}">Logout</a>
+                {% else %}
+                    <a id="adminButton" href="{% url 'login'%}?next={{request.path}}">Login</a>
+                    <a id="adminButton" href="{% url 'registr'%}?next={{request.path}}">SignUp</a>
+                {% endif %}
+                {% if user.is_staff %}
+                    <a id="adminButton" href="http://127.0.0.1:8000/admin/">Admin</a>
+                {% endif %}
+            </div>            
+        </div>
+      </div>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}       
+    </main>
+    <footer> 
+        <div class="footer">
+            <div class="footer__block">
+                <div id="google_translate_element"></div>
+            </div>
+            <div class="footer__block">
+                All rights reserved
+            </div> 
+            <div class="footer__block">
+                All rights reserved
+            </div>  
+        </div>             
+    </footer>    
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+    </script>        
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>

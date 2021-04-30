@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="contayner" id="body_contayner">
+    <div class="topics__contayner">
+        {% for topic in topics %}
+            <a href="topics/{{topic.id}}/" class="topic">{{topic.tittle|title}}</a>
+        {% endfor %}
+    </div>            
+    <h1>The latest news</h3>
+    <div class="news__contayner">
+        {% for element in news %} 
+            <a class="news__block" href="news/{{element.id}}">
+                <div class="news__title">{{element.name | title}}</div>
+                <div class="news__short__text">{{element.short_txt}}</div>
+                <div class="news__body__text">{{element.body_txt}}</div>
+                <div class="news__date">{{element.date | date}}</div>
+            </a>
+        {% endfor %}
+    </div>
+</div> 
+{% endblock %}
